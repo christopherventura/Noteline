@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_all_notes"
+        android:title="@string/all_notes"
+        android:icon="@drawable/ic_folder_black_24dp"
+        />
+
+    <item
+        android:id="@+id/action_trash"
+        android:title="@string/trash"
+        android:icon="@drawable/ic_delete_black_24dp"
+        />
+
+    <item
+        android:id="@+id/categories_submenu"
+        app:showAsAction="ifRoom"
+        android:title="@string/categories">
+
+        <menu>
+        </menu>
+
+    </item>
+
+</menu>

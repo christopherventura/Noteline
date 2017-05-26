@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_selected_note"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:layout_toEndOf="@id/checkbox_selected_note"
+        android:layout_toRightOf="@id/checkbox_selected_note"
+        android:layout_width="match_parent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="1dp"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_marginBottom="2dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_noteTitleText"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/item_noteCategoryText"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignEnd="@id/item_noteTitleText"
+                android:layout_alignRight="@id/item_noteTitleText"
+                android:padding="1dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_noteBodyText"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_noteTitleText"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

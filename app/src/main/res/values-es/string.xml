@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Noteline</string>
+
+    <string name="all_notes">Notas</string>
+    <string name="notes_title">Notas</string>
+
+    <string name="title">Titulo</string>
+    <string name="whatsabout">De que se trata?</string>
+    <string name="add_category">Añadir categoría</string>
+    <string name="no_notes_yet">No hay notas.</string>
+    <string name="set_category">Elegir categoría</string>
+    <string name="save">Guardar</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Borrar</string>
+    <string name="remove">Eliminar</string>
+    <string name="share">Compartir</string>
+    <string name="move">Mover</string>
+    <string name="share_note">Compartir nota</string>
+    <string name="search">Buscar</string>
+    <string name="search_hint">Buscar...</string>
+    <string name="both_fields_are_empty">Ambos campos están vacios</string>
+    <string name="save_your_changes_or_discard_them">Guardar o descartar los cambios?</string>
+    <string name="discard">Descartar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="categories">Categorias</string>
+    <string name="this_category_is_not_editable">Esta categoría no es editable</string>
+    <string name="select_category">Seleccionar categoría</string>
+    <string name="category_name">Nombre de la categoría</string>
+    <string name="empty_string"></string>
+    <string name="edit_category">Editar categoría</string>
+    <string name="delete_category">Eliminar categoría</string>
+    <string name="closing_navigation_bar">Cerrando barra de navegacion</string>
+    <string name="opening_navigation_bar">Abriendo barra de navegacion</string>
+    <string name="deleting_note_delete_notes">Todas las notas pertenecientes a esta categoría seran borradas.</string>
+    <string name="select_notes">Selecciona notas</string>
+    <string name="notes_selected">%i seleccionadas</string>
+    <string name="uncategorized">Uncategorized</string>
+    <string name="trash">Papelería</string>
+    <string name="check">Marcar</string>
+    <string name="last_update">Editado última vez %s</string>
+    <string name="are_you_sure">¿Estás seguro?</string>
+    <string name="default_note">Mi primera nota</string>
+    <string name="example_note_body">Esto es solo una nota de ejemplo, mantén presionado para eliminar.</string>
+</resources>

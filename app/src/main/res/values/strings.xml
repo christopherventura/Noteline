@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Noteline</string>
+
+    <string name="all_notes">All Notes</string>
+    <string name="notes_title">All Notes</string>
+
+    <string name="title">Title</string>
+    <string name="whatsabout">What\'s about?</string>
+    <string name="add_category">Add category</string>
+    <string name="no_notes_yet">No notes yet.</string>
+    <string name="set_category">Set category</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="remove">Remove</string>
+    <string name="share">Share</string>
+    <string name="move">Move</string>
+    <string name="share_note">Share note</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search...</string>
+    <string name="both_fields_are_empty">Both files are empty</string>
+    <string name="save_your_changes_or_discard_them">Save your changes or discard them?</string>
+    <string name="discard">Discard</string>
+    <string name="cancel">Cancel</string>
+    <string name="categories">Categories</string>
+    <string name="this_category_is_not_editable">This category is not editable</string>
+    <string name="select_category">Select category</string>
+    <string name="category_name">Category name</string>
+    <string name="empty_string"></string>
+    <string name="edit_category">Edit category</string>
+    <string name="delete_category">Delete category</string>
+    <string name="closing_navigation_bar">Closing navigation bar</string>
+    <string name="opening_navigation_bar">Opening navigation bar</string>
+    <string name="deleting_note_delete_notes">All the notes that belong to this category will be deleted.</string>
+    <string name="select_notes">Select notes</string>
+    <string name="notes_selected">%i selected</string>
+    <string name="uncategorized">Uncategorized</string>
+    <string name="default_note">Default Note</string>
+    <string name="trash">Trash</string>
+    <string name="check">Check</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="last_update">Last update %s</string>
+    <string name="example_note_body">This is just an example note, you can long press this item to delete it.</string>
+</resources>

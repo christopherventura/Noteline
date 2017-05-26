@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/colorIcons"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_marginBottom="1dp"
+    android:layout_width="match_parent">
+
+    <android.support.v7.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/item_noteTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:text="@string/default_note"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+            <ImageView
+                android:id="@+id/img_checked"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_radio_button_checked_black_24dp"
+                android:tint="@color/colorAccent"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/item_noteTitleText"
+                android:layout_toEndOf="@+id/item_noteTitleText" />
+
+
+            <TextView
+                android:id="@+id/item_noteCategoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/item_noteTitleText"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/item_noteTitleText"
+                android:padding="1dp"
+                android:text="@string/uncategorized"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/item_noteBodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_noteTitleText"
+                android:maxLines="2"
+                android:text="@string/example_note_body"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorSecondaryText" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_add_note"
+    tools:context=".UI.AddNoteActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <EditText
+            android:hint="@string/title"
+            android:inputType="text|textCapSentences"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:padding="12dp"
+            android:lines="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:maxLength="68"
+            android:id="@+id/addnote_TitleText"
+            android:background="@color/colorIcons"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+            <jp.wasabeef.richeditor.RichEditor
+                android:id="@+id/addnote_BodyText"
+                android:inputType="textLongMessage|textMultiLine"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+            </jp.wasabeef.richeditor.RichEditor>
+
+
+        <TextView
+            android:id="@+id/addnote_lastupdate_text"
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
