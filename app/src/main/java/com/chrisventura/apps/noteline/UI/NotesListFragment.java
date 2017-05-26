@@ -115,7 +115,6 @@ public class NotesListFragment extends Fragment
         View root = inflater.inflate(R.layout.fragment_notes_list, container, false);
         idsToMove = new ArrayList<>();
         mRvNoteList = (RecyclerView) root.findViewById(R.id.rv_noteslist);
-        mRvNoteList.setItemAnimator(new DefaultItemAnimator());
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         manager.setSmoothScrollbarEnabled(false);
