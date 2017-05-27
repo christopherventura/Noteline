@@ -3,34 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:showIn="@layout/activity_add_note"
+    android:background="@color/colorIcons"
     tools:context=".UI.AddNoteActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <EditText
-            android:hint="@string/title"
-            android:inputType="text|textCapSentences"
-            android:textAlignment="textStart"
-            android:gravity="start"
-            android:padding="12dp"
-            android:lines="1"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-            android:maxLength="68"
-            android:id="@+id/addnote_TitleText"
-            android:background="@color/colorIcons"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            />
 
-            <jp.wasabeef.richeditor.RichEditor
+    <EditText
+        android:id="@+id/addnote_TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorIcons"
+        android:gravity="start"
+        android:hint="@string/title"
+        android:inputType="text|textCapSentences"
+        android:lines="1"
+        android:maxLength="68"
+        android:padding="12dp"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+
+    <View
+        android:id="@+id/addnote_dividerView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorDivider"
+        />
+
+    <jp.wasabeef.richeditor.RichEditor
                 android:id="@+id/addnote_BodyText"
                 android:inputType="textLongMessage|textMultiLine"
-                android:layout_marginTop="2dp"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_height="0dp">
+                android:layout_height="wrap_content">
             </jp.wasabeef.richeditor.RichEditor>
 
 

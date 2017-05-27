@@ -14,11 +14,15 @@ import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,15 +85,20 @@ public class AddNoteActivity extends AppCompatActivity {
         mTitleText = (EditText) findViewById(R.id.addnote_TitleText);
         mBodyText = (RichEditor) findViewById(R.id.addnote_BodyText);
         mLastUpdate = (TextView) findViewById(R.id.addnote_lastupdate_text);
+        mLastUpdate.setVisibility(View.INVISIBLE);
         mBodyText.setInputEnabled(false);
+        mBodyText.focusEditor();
         mBodyText.loadCSS("file:///android_res/raw/style.css");
         mBodyText.setHorizontalScrollBarEnabled(false);
 
-        mBodyText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        mBodyText.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
+            public boolean onTouch(View v, MotionEvent event) {
                 mBodyText.setInputEnabled(true);
                 mLastUpdate.setVisibility(View.GONE);
+                View divider = findViewById(R.id.addnote_dividerView);
+                divider.setVisibility(View.VISIBLE);
+                return false;
             }
         });
 
@@ -110,10 +119,8 @@ public class AddNoteActivity extends AppCompatActivity {
             if (body != null && !TextUtils.isEmpty(body)) {
                 mBodyText.setHtml(body);
             }
-            //mBodyText.setInputType(InputType.TYPE_TEXT_FLAG_MULTI_LINE);
             mLastUpdate.setVisibility(View.GONE);
             recoveryCurrentCategory();
-            mBodyText.focusEditor();
         } else {
             String uriId = getIntent().getStringExtra(NotesListFragment.EDIT_NOTE_ID);
             if (uriId != null) {
@@ -121,7 +128,6 @@ public class AddNoteActivity extends AppCompatActivity {
                 mIsEditing = true;
                 new LoadNoteTask().execute(mUriId);
             } else {
-                mBodyText.focusEditor();
                 recoveryCurrentCategory();
             }
         }
@@ -189,12 +195,6 @@ public class AddNoteActivity extends AppCompatActivity {
     }
 
 
-    private void insertPhoto() {
-        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-        i.setType("image/*");
-        startActivityForResult(i, REQUEST_PHOTO_INSERTION);
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -242,6 +242,12 @@ public class AddNoteActivity extends AppCompatActivity {
             default:
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void insertPhoto() {
+        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+        i.setType("image/*");
+        startActivityForResult(i, REQUEST_PHOTO_INSERTION);
     }
 
     @Override
@@ -404,6 +410,7 @@ public class AddNoteActivity extends AppCompatActivity {
             }
             String last_update = DateUtils.getRelativeTime(getApplicationContext(), update);
             mLastUpdate.setText(getResources().getString(R.string.last_update, last_update));
+            mLastUpdate.setVisibility(View.VISIBLE);
         }
     }
 
