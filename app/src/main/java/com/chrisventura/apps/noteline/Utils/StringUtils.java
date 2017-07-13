@@ -7,6 +7,9 @@ package com.chrisventura.apps.noteline.Utils;
 public class StringUtils {
 
     public static String removeHtmlTags(String html) {
+        if (html == null) {
+            return "";
+        }
         String parsed = html
                 .replace("<li>", " - ")
                 .replace("</li>", "")

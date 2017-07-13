@@ -38,14 +38,13 @@
         />
 
     <jp.wasabeef.richeditor.RichEditor
-                android:id="@+id/addnote_BodyText"
-                android:inputType="textLongMessage|textMultiLine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </jp.wasabeef.richeditor.RichEditor>
+        android:id="@+id/addnote_BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textLongMessage|textMultiLine"></jp.wasabeef.richeditor.RichEditor>
 
 
-        <TextView
+    <TextView
             android:id="@+id/addnote_lastupdate_text"
             android:textAlignment="textEnd"
             android:layout_gravity="end"
